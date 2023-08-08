@@ -28,7 +28,7 @@ app.post("/convert", async (req, res) => {
        
         ` },
       { role: "user", content: `${message.value}` }],
-      max_tokens: 200,
+      max_tokens: 100,
       temperature: 0,
     })
     res.status(200).send(response.data.choices[0].message.content)
